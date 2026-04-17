@@ -8,24 +8,29 @@
 body {
     margin: 0;
     height: 100vh;
+    background: #050814; /* koyu siyah/lacivert */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #050814;
     font-family: Arial, sans-serif;
 }
 
-img {
-    width: 120px;
-    margin-bottom: 20px;
+/* LOGO */
+.logo {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 12px;
 }
 
+/* BUTTON */
 button {
     background: white;
     color: black;
     border: none;
-    padding: 15px 35px;
+    padding: 15px 40px;
     font-size: 18px;
     border-radius: 12px;
     cursor: pointer;
@@ -42,7 +47,7 @@ button:hover {
 <body>
 
 <!-- LOGO -->
-<img src="logo.png" alt="logo">
+<img src="logo.png" class="logo">
 
 <!-- BUTTON -->
 <button onclick="copyText()">Get HUB</button>
@@ -50,7 +55,7 @@ button:hover {
 <script>
 function copyText() {
     navigator.clipboard.writeText("test 1123");
-    alert("Kopyalandı: test 1123");
+    alert("Coppied: test 1123");
 }
 </script>
 
