@@ -9,10 +9,16 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #050814; /* koyu lacivert-siyah */
+    background: #050814;
     font-family: Arial, sans-serif;
+}
+
+img {
+    width: 120px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -35,6 +41,10 @@ button:hover {
 
 <body>
 
+<!-- LOGO -->
+<img src="logo.png" alt="logo">
+
+<!-- BUTTON -->
 <button onclick="copyText()">Get HUB</button>
 
 <script>
