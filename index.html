@@ -16,17 +16,52 @@ body {
     font-family: Arial, sans-serif;
     color: white;
 
-    /* NEON BORDER */
     box-shadow:
         inset 0 0 0 3px #00f0ff,
         inset 0 0 20px #00f0ff,
         inset 0 0 40px #ff00ff;
 }
 
-/* SOL YAZI */
+/* VERSION */
+.version {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    text-align: right;
+    color: #00ff9d;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.version span {
+    display: block;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+/* CHANGELOG */
+.changelog {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    width: 220px;
+    background: rgba(0,0,0,0.9);
+    border: 1px solid #00ff9d;
+    box-shadow: 0 0 15px #00ff9d;
+    padding: 10px;
+    font-size: 12px;
+    display: none;
+    border-radius: 8px;
+}
+
+.changelog h3 {
+    margin: 0 0 5px 0;
+    color: #00ff9d;
+}
+
+/* TEXT */
 .text {
     width: 40%;
-    color: white;
 }
 
 .text h1 {
@@ -40,7 +75,7 @@ body {
     font-size: 16px;
 }
 
-/* SAĞ TARAF */
+/* RIGHT SIDE */
 .right {
     display: flex;
     flex-direction: column;
@@ -51,7 +86,6 @@ body {
 .logo {
     width: 45%;
     max-width: 500px;
-    height: auto;
     margin-bottom: 30px;
     border-radius: 12px;
 }
@@ -77,16 +111,32 @@ button:hover {
 
 <body>
 
-<div class="text">
-    <h1>JoJo Hub ?</h1>
-
-<p>JoJo Hub is a menu containing hundreds of unique scripts.</p>
-<p>It also contains scripts for every game.</p>
-<p>There is no key system.</p>
-<p>User experience is very important to me!!!</p>
-<p>by JoJo</p>
+<!-- VERSION -->
+<div class="version" onclick="toggleChangelog()">
+    VERSION
+    <span>v1.1.1</span>
 </div>
 
+<!-- CHANGELOG -->
+<div class="changelog" id="changelog">
+    <h3>Changelog</h3>
+    <p>• Initial release</p>
+    <p>• Get HUB added</p>
+    <p>• Neon UI system</p>
+</div>
+
+<!-- TEXT -->
+<div class="text">
+    <h1>What is JoJo Hub?</h1>
+
+    <p>JoJo Hub is a menu that contains hundreds of unique scripts.</p>
+    <p>It also includes scripts for many different games.</p>
+    <p>There is no key system.</p>
+    <p>User experience is our top priority.</p>
+    <p>"Provides an advantage in-game" by JoJo</p>
+</div>
+
+<!-- RIGHT -->
 <div class="right">
 
     <img src="logo.png" class="logo">
@@ -98,7 +148,12 @@ button:hover {
 <script>
 function copyText() {
     navigator.clipboard.writeText("test 1123");
-    alert("Coppied: test 1123");
+    alert("Copied: test 1123");
+}
+
+function toggleChangelog() {
+    var box = document.getElementById("changelog");
+    box.style.display = (box.style.display === "block") ? "none" : "block";
 }
 </script>
 
