@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>JJ-STUDIO</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050814; /* koyu lacivert-siyah */
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #eaeaea;
+}
+</style>
 </head>
+
 <body>
-<h1>JJ-STUDIO</h1>
-<p>Roblox Script Hub</p>
+
+<button onclick="copyText()">Get HUB</button>
+
+<script>
+function copyText() {
+    navigator.clipboard.writeText("test 1123");
+    alert("Kopyalandı: test 1123");
+}
+</script>
+
 </body>
 </html>
